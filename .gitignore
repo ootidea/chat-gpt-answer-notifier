@@ -1,0 +1,11 @@
+﻿# macOS
+.DS_Store
+
+# JetBrains(WebStorm)
+.idea
+
+# npm
+node_modules
+
+# build
+dist
