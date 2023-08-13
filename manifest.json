@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.0",
+  "name": "Chat GPT回答通知",
+  "description": "TODO: ",
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["https://chat.openai.com/*"],
+  "permissions": []
+}
