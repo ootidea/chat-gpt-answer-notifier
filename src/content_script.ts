@@ -1,14 +1,21 @@
-let isAnswering = document.querySelector('.result-streaming') !== null
+let resultStreaming = document.querySelector('.result-streaming')
 
 const mutationObserver = new MutationObserver(() => {
-  const exists = document.querySelector('.result-streaming') !== null
-  if (!exists && isAnswering && document.visibilityState === 'hidden') {
+  const currentResultStreaming = document.querySelector('.result-streaming')
+  if (
+    currentResultStreaming === null &&
+    resultStreaming !== null &&
+    document.visibilityState === 'hidden'
+  ) {
     console.log('Chat GPT回答通知', 'chrome.runtime.sendMessage', new Date().toLocaleString())
     chrome.runtime.sendMessage({
       type: 'showNotification',
-      options: { title: 'Chat GPT', message: '回答が完了しました。' },
+      options: {
+        title: 'Chat GPT',
+        message: resultStreaming.textContent ?? '回答が完了しました。',
+      },
     })
   }
-  isAnswering = exists
+  resultStreaming = currentResultStreaming
 })
 mutationObserver.observe(document.body, { childList: true, subtree: true })
