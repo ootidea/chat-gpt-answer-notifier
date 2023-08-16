@@ -2,6 +2,7 @@
   "name": "chat-gpt-answer-notifier",
   "private": true,
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "run-p build:*",
     "build:ts": "esbuild src/content_script.ts src/background.ts --bundle --outdir=dist",
     "build:copy": "cpx static/** dist",
@@ -13,7 +14,8 @@
     "cpx": "^1.5.0",
     "esbuild": "^0.19.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.1",
+    "rimraf": "^5.0.1"
   },
   "volta": {
     "node": "18.12.1"
