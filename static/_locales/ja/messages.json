@@ -1,0 +1,8 @@
+{
+  "extensionName": {
+    "message": "Chat GPT回答通知"
+  },
+  "extensionDescription": {
+    "message": "Chat GPTの回答が完了したら通知します。回答を待っている間に別のタブ、ウィンドウで作業をしていても通知をクリックして戻って来られます。"
+  }
+}

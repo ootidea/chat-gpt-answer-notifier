@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "version": "0.1.0",
-  "name": "Chat GPT回答通知",
-  "description": "TODO: ",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "content_scripts": [
     {
       "matches": ["https://chat.openai.com/*"],
