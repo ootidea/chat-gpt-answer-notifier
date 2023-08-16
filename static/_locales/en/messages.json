@@ -4,5 +4,8 @@
   },
   "extensionDescription": {
     "message": "It notifies you when the response from Chat GPT is complete. You can browse another tab or window while waiting for a response."
+  },
+  "responseIsComplete": {
+    "message": "The response is complete."
   }
 }

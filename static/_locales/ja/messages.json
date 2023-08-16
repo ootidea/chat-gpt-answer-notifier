@@ -4,5 +4,8 @@
   },
   "extensionDescription": {
     "message": "Chat GPTの回答が完了したら通知します。回答を待っている間に別のタブ、ウィンドウで作業をしていても通知をクリックして戻って来られます。"
+  },
+  "responseIsComplete": {
+    "message": "回答が完了しました。"
   }
 }

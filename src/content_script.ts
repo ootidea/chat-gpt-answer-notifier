@@ -11,7 +11,7 @@ const mutationObserver = new MutationObserver(() => {
       type: 'showNotification',
       options: {
         title: 'Chat GPT',
-        message: resultStreaming.textContent ?? '回答が完了しました。',
+        message: resultStreaming.textContent ?? chrome.i18n.getMessage('responseIsComplete'),
       },
     })
   }
