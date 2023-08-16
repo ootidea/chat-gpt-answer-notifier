@@ -7,7 +7,6 @@ const mutationObserver = new MutationObserver(() => {
     resultStreaming !== null &&
     document.visibilityState === 'hidden'
   ) {
-    console.log('Chat GPT回答通知', 'chrome.runtime.sendMessage', new Date().toLocaleString())
     chrome.runtime.sendMessage({
       type: 'showNotification',
       options: {
