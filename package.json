@@ -5,7 +5,7 @@
     "prebuild": "rimraf dist",
     "build": "run-p build:*",
     "build:ts": "esbuild src/content_script.ts src/background.ts --bundle --outdir=dist",
-    "build:copy": "cpx static/** dist",
+    "build:copy": "cpx \"static/**\" dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
