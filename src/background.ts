@@ -9,6 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
           iconUrl: 'logo128px.png',
           title: message.options.title,
           message: message.options.message,
+          isClickable: true,
         },
         (notificationId) => {
           if (sender.tab?.id !== undefined) {
@@ -23,6 +24,15 @@ chrome.runtime.onMessage.addListener((message, sender) => {
           }
         },
       )
+
+      // To prevent memory leaks, delete old entries.
+      chrome.notifications.getAll((notifications) => {
+        for (const notificationId of tabInfos.keys()) {
+          if (!(notificationId in notifications)) {
+            tabInfos.delete(notificationId)
+          }
+        }
+      })
       break
   }
 })
