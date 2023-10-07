@@ -15,7 +15,6 @@
   "host_permissions": ["https://chat.openai.com/*"],
   "permissions": ["notifications"],
   "icons": {
-    "16": "logo16px.png",
     "48": "logo48px.png",
     "128": "logo128px.png"
   },
