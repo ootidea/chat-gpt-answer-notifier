@@ -10,6 +10,8 @@ chrome.runtime.onMessage.addListener((message, sender) => {
           title: message.options.title,
           message: message.options.message,
           isClickable: true,
+          // TODO: add options to disable sound
+          // silent: true,
         },
         (notificationId) => {
           if (sender.tab?.id !== undefined) {
