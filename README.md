@@ -4,8 +4,8 @@ This is a Chrome extension that notifies you when a Chat GPT response is complet
 You can install it on [the Chrome Web Store page](https://chrome.google.com/webstore/detail/chat-gpt-response-notifie/bonigohnnoodjnahekojpcdffmekecbo/).  
 
 ## Feature
-- Notifies you when a Chat GPT response (answer) is complete and the page is in the background
-- Clicking the notification will take you back to the Chat GPT page
+- Notifies you when a Chat GPT response (answer) is complete and the tab/window is in the background
+- Clicking the notification will take you back to the tab/window
 - It only works on the official Chat GPT site
 
 ## Are notifications not displaying on macOS?
