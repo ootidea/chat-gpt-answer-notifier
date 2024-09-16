@@ -2,11 +2,7 @@ let resultStreaming = document.querySelector('.result-streaming')
 
 const mutationObserver = new MutationObserver(() => {
   const currentResultStreaming = document.querySelector('.result-streaming')
-  if (
-    currentResultStreaming === null &&
-    resultStreaming !== null &&
-    document.visibilityState === 'hidden'
-  ) {
+  if (currentResultStreaming === null && resultStreaming !== null && document.visibilityState === 'hidden') {
     chrome.runtime.sendMessage({
       type: 'showNotification',
       options: {
