@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "run-p build:*",
+    "build": "run-p \"build:*\"",
     "build:ts": "esbuild src/content_script.ts src/background.ts --bundle --outdir=dist",
     "build:copy": "cpx \"static/**\" dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,5 @@
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5"
   },
-  "volta": {
-    "node": "18.12.1"
-  }
+  "packageManager": "pnpm@9.10.0"
 }
